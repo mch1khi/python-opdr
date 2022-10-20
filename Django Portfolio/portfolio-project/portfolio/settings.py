@@ -30,14 +30,19 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-INSTALLED_APPS = [
+INSTALLED_APPS = [ 
+    'accounts.apps.AccountsConfig',  #Toevoegen 
+    'werken.apps.WerkenConfig',
     'django.contrib.admin',
-    'django.contrib.auth',
+    'django.contrib.auth', # autorisatie van gebruikers (standaard) 
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
