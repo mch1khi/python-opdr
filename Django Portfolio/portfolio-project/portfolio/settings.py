@@ -9,9 +9,8 @@ https://docs.djangoproject.com/en/4.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
-
-from pathlib import Path
 import os
+from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-u5v7^(^=#d7x+3&obf0!3=y5r7uclxoo!ob$=q^y%9b)g-7br8'
+SECRET_KEY = 'django-insecure-rv@remlc29%04-4f2lwk5m%6o#39p74-6!*4ubsusa(z4lmwha'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -30,10 +29,7 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-INSTALLED_APPS = [
-        'werken.apps.WerkenConfig',
-        'django.contrib.admin',
-]
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -56,8 +52,8 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'portfolio.urls'
 
 TEMPLATES = [
-    {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates', 'DIRS': ['portfolio/templates'],
+        {
+'BACKEND': 'django.template.backends.django.DjangoTemplates', 'DIRS': ['portfolio/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -118,7 +114,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 STATICFILES_DIRS =[
-os.path.join(BASE_DIR, 'portfolio/static/')
+        os.path.join(BASE_DIR, 'portfolio/static/')
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
